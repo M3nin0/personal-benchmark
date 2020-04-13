@@ -6,13 +6,18 @@
 
 namespace PBanchmark
 {
+    struct TimerResult
+    {
+        double msResult, mlResult;
+    };
+
     class Timer
     {
     public:
         Timer(std::string name);
         ~Timer();
 
-        void finish();
+        TimerResult* finish();
 
         std::string name();
     private:
